@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        http-equiv="Content-Security-Policy"
+        content="
+            default-src 'self';
+            script-src 'self';
+            style-src 'self';
+            img-src 'self' data:;
+            font-src 'self';
+            connect-src 'self';
+            object-src 'none';
+            frame-src 'none';
+            media-src 'self';
+            worker-src 'self';
+            manifest-src 'self';
+            base-uri 'self';
+            form-action 'self';
+        "
+    >
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Bennie Ray III cybersecurity and AI security portfolio."
+    >
+
+    <meta
+        name="referrer"
+        content="strict-origin-when-cross-origin"
+    >
+
+    <title>
+        Bennie Ray III | Cybersecurity & AI Security
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="css/styles.css"
+    >
+</head>
+
+<body>
+    <header class="site-header">
+        <nav class="navbar container">
+            <a class="logo" href="#home">
+                BR<span>III</span>
+            </a>
+
+            <button
+                class="menu-button"
+                id="menu-button"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="nav-links"
+            >
+                ☰
+            </button>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li>
+                    <a href="#certifications">
+                        Certifications
+                    </a>
+                </li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="container hero-content">
+                <p class="eyebrow">
+                    Cybersecurity • AI Security • Detection Engineering
+                </p>
+
+                <h1>Bennie Ray III</h1>
+
+                <h2>
+                    Building practical security tools that detect,
+                    prioritize, and investigate threats.
+                </h2>
+
+                <p class="hero-description">
+                    I build cybersecurity solutions using Python,
+                    FastAPI, Docker, machine learning, threat
+                    intelligence, and security automation.
+                </p>
+
+                <div class="hero-actions">
+                    <a
+                        class="button button-primary"
+                        href="#projects"
+                    >
+                        View Projects
+                    </a>
+
+                    <a
+                        class="button button-secondary"
+                        href="#contact"
+                    >
+                        Contact Me
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="about">
+            <div class="container">
+                <p class="section-label">About</p>
+
+                <h2 class="section-title">
+                    Security engineering with a practical focus
+                </h2>
+
+                <p class="section-text">
+                    I am a cybersecurity professional focused on
+                    building practical detection, investigation,
+                    and security automation solutions.
+                </p>
+
+                <p class="section-text">
+                    My projects cover email security, identity
+                    protection, SOC alert correlation, threat
+                    intelligence, API development, and containerized
+                    security services.
+                </p>
+            </div>
+        </section>
+
+        <section class="section section-alt" id="skills">
+            <div class="container">
+                <p class="section-label">Skills</p>
+
+                <h2 class="section-title">
+                    Technical capabilities
+                </h2>
+
+                <div class="skills-grid">
+                    <article class="skill-card">
+                        <h3>Programming</h3>
+                        <p>Python, SQL, PowerShell</p>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>Cybersecurity</h3>
+                        <p>
+                            Detection Engineering, SOC Operations,
+                            Threat Intelligence, Incident Response
+                        </p>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>Development</h3>
+                        <p>
+                            FastAPI, REST APIs, Docker, Pandas,
+                            Scikit-learn
+                        </p>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>Cloud</h3>
+                        <p>
+                            Microsoft Azure and Google Cloud Platform
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="projects">
+            <div class="container">
+                <p class="section-label">Projects</p>
+
+                <h2 class="section-title">
+                    Featured security projects
+                </h2>
+
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <p class="project-number">01</p>
+
+                        <h3>AI Phishing Detection API</h3>
+
+                        <p>
+                            Machine-learning phishing classifier with
+                            explainable indicators, confidence scoring,
+                            severity levels, authentication, logging,
+                            and Docker support.
+                        </p>
+
+                        <div class="tag-list">
+                            <span>Python</span>
+                            <span>Machine Learning</span>
+                            <span>FastAPI</span>
+                            <span>Docker</span>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <p class="project-number">02</p>
+
+                        <h3>Suspicious Login Detector</h3>
+
+                        <p>
+                            Identity threat detection service that finds
+                            brute-force activity, unusual locations,
+                            after-hours access, and possible account
+                            compromise.
+                        </p>
+
+                        <div class="tag-list">
+                            <span>Threat Intel</span>
+                            <span>Risk Scoring</span>
+                            <span>FastAPI</span>
+                            <span>Docker</span>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <p class="project-number">03</p>
+
+                        <h3>SOC Alert Correlation Engine</h3>
+
+                        <p>
+                            Correlates phishing and login alerts into
+                            incidents with case ownership, severity,
+                            risk scoring, and analyst actions.
+                        </p>
+
+                        <div class="tag-list">
+                            <span>SOC</span>
+                            <span>Correlation</span>
+                            <span>Incident Response</span>
+                            <span>Pandas</span>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <p class="project-number">04</p>
+
+                        <h3>Threat Intelligence IOC Analyzer</h3>
+
+                        <p>
+                            Enriches IP addresses, domains, and file
+                            hashes with reputation, confidence,
+                            severity, risk scoring, and response
+                            recommendations.
+                        </p>
+
+                        <div class="tag-list">
+                            <span>IOC Analysis</span>
+                            <span>Threat Intelligence</span>
+                            <span>FastAPI</span>
+                            <span>Logging</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section
+            class="section section-alt"
+            id="certifications"
+        >
+            <div class="container">
+                <p class="section-label">Certifications</p>
+
+                <h2 class="section-title">
+                    Professional development
+                </h2>
+
+                <div class="certification-grid">
+                    <article class="certification-card">
+                        <h3>
+                            Microsoft Azure Security Engineer
+                            Associate
+                        </h3>
+
+                        <p>AZ-500 Professional Certificate</p>
+                    </article>
+
+                    <article class="certification-card">
+                        <h3>IBM Cybersecurity Analyst</h3>
+                        <p>Professional Certificate</p>
+                    </article>
+
+                    <article class="certification-card">
+                        <h3>Google Data Analytics</h3>
+                        <p>Professional Certificate</p>
+                    </article>
+
+                    <article class="certification-card">
+                        <h3>Python, SQL, Power BI and SAS</h3>
+                        <p>Technical training and certificates</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section
+            class="section contact-section"
+            id="contact"
+        >
+            <div class="container">
+                <p class="section-label">Contact</p>
+
+                <h2 class="section-title">
+                    Let’s connect
+                </h2>
+
+                <p class="section-text">
+                    I am building toward cybersecurity engineering,
+                    detection engineering, SOC automation, and AI
+                    security roles.
+                </p>
+
+                <div class="contact-links">
+                    <a href="mailto:your-email@example.com">
+                        Email
+                    </a>
+
+                    <a
+                        href="#"
+                        aria-label="LinkedIn profile"
+                    >
+                        LinkedIn
+                    </a>
+
+                    <a
+                        href="#"
+                        aria-label="GitHub profile"
+                    >
+                        GitHub
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>
+                © <span id="current-year"></span>
+                Bennie Ray III. Built with HTML, CSS, and JavaScript.
+            </p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
