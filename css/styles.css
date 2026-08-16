@@ -402,3 +402,38 @@ a {
         grid-template-columns: 1fr;
     }
 }
+
+/* Security Architecture */
+
+.architecture-demo {
+    margin-top: 2rem;
+}
+
+.architecture-demo a {
+    display: block;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: var(--surface);
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.architecture-demo a:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent);
+}
+
+.architecture-demo img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.architecture-caption {
+    margin-top: 1rem;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
