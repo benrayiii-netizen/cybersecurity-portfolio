@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        http-equiv="Content-Security-Policy"
+        content="
+            default-src 'self';
+            script-src 'self';
+            style-src 'self';
+            img-src 'self' data:;
+            font-src 'self';
+            connect-src 'self';
+            object-src 'none';
+            frame-src 'none';
+            base-uri 'self';
+            form-action 'self';
+        "
+    >
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Case study for the BRIII Threat Intelligence IOC Analyzer."
+    >
+
+    <title>
+        Threat Intelligence IOC Analyzer | BRIII Case Study
+    </title>
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="images/favicon.png"
+    >
+</head>
+
+<body>
+
+    <header class="site-header">
+        <nav class="navbar container">
+
+            <a class="logo" href="index.html">
+                BR<span>III</span>
+            </a>
+
+            <ul class="nav-links">
+                <li>
+                    <a href="index.html#projects">
+                        ← Back to Portfolio
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+    </header>
+
+
+    <main>
+
+        <!-- CASE STUDY HERO -->
+        <section class="hero case-study-hero">
+            <div class="container hero-content">
+
+                <p class="eyebrow">
+                    PROJECT 04 • THREAT INTELLIGENCE • IOC ANALYSIS
+                </p>
+
+                <h1>Threat Intelligence IOC Analyzer</h1>
+
+                <h2>
+                    Enriching indicators of compromise with reputation,
+                    confidence, severity, risk scoring, and SOC response
+                    recommendations.
+                </h2>
+
+                <div class="tag-list">
+                    <span>Python</span>
+                    <span>FastAPI</span>
+                    <span>Threat Intelligence</span>
+                    <span>IOC Analysis</span>
+                    <span>Risk Scoring</span>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- PROBLEM -->
+        <section class="section">
+            <div class="container">
+
+                <p class="section-label">The Problem</p>
+
+                <h2 class="section-title">
+                    Indicators need context before they become useful
+                </h2>
+
+                <p class="section-text">
+                    IP addresses, domains, and file hashes may appear in
+                    alerts without enough context for an analyst to know
+                    how dangerous they are. Security teams need a way to
+                    enrich these indicators with reputation data,
+                    confidence, threat type, severity, and response
+                    guidance.
+                </p>
+
+            </div>
+        </section>
+
+
+        <!-- SOLUTION -->
+        <section class="section section-alt">
+            <div class="container">
+
+                <p class="section-label">The Solution</p>
+
+                <h2 class="section-title">
+                    Threat-intelligence enrichment and prioritization
+                </h2>
+
+                <p class="section-text">
+                    The analyzer accepts indicators of compromise,
+                    compares them against local threat-intelligence data,
+                    enriches each indicator with reputation and threat
+                    context, and assigns severity, risk scores, and
+                    recommended analyst actions.
+                </p>
+
+                <div class="case-study-grid">
+
+                    <article class="skill-card">
+                        <h3>IOC Enrichment</h3>
+                        <p>
+                            Adds threat context to IP addresses, domains,
+                            and file hashes.
+                        </p>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>Reputation Analysis</h3>
+                        <p>
+                            Classifies indicators as Malicious,
+                            Suspicious, Trusted, or Unknown.
+                        </p>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>Confidence Scoring</h3>
+                        <p>
+                            Uses intelligence confidence to support
+                            severity and prioritization decisions.
+                        </p>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>Response Guidance</h3>
+                        <p>
+                            Produces recommended SOC actions based on the
+                            resulting severity and threat context.
+                        </p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ARCHITECTURE -->
+        <section class="section">
+            <div class="container">
+
+                <p class="section-label">Architecture</p>
+
+                <h2 class="section-title">
+                    From IOC input to analyst response
+                </h2>
+
+                <div class="case-flow">
+
+                    <div class="case-flow-step">
+                        <strong>1</strong>
+                        <span>IOC Input</span>
+                    </div>
+
+                    <div class="case-flow-arrow">→</div>
+
+                    <div class="case-flow-step">
+                        <strong>2</strong>
+                        <span>FastAPI</span>
+                    </div>
+
+                    <div class="case-flow-arrow">→</div>
+
+                    <div class="case-flow-step">
+                        <strong>3</strong>
+                        <span>Intel Lookup</span>
+                    </div>
+
+                    <div class="case-flow-arrow">→</div>
+
+                    <div class="case-flow-step">
+                        <strong>4</strong>
+                        <span>Reputation</span>
+                    </div>
+
+                    <div class="case-flow-arrow">→</div>
+
+                    <div class="case-flow-step">
+                        <strong>5</strong>
+                        <span>Risk Scoring</span>
+                    </div>
+
+                    <div class="case-flow-arrow">→</div>
+
+                    <div class="case-flow-step">
+                        <strong>6</strong>
+                        <span>SOC Action</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- THREAT INTELLIGENCE -->
+        <section class="section section-alt">
+            <div class="container">
+
+                <p class="section-label">Threat Intelligence</p>
+
+                <h2 class="section-title">
+                    Structured context for analyst decision-making
+                </h2>
+
+                <div class="case-study-grid">
+
+                    <article class="skill-card">
+                        <h3>Threat Type</h3>
+                        <p>
+                            Identifies contextual categories such as
+                            Tor Exit Node, Phishing Domain, or Known
+                            Malware Hash.
+                        </p>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>Source Attribution</h3>
+                        <p>
+                            Returns the intelligence source associated
+                            with the indicator.
+                        </p>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>Severity</h3>
+                        <p>
+                            Maps reputation and confidence to Critical,
+                            High, Medium, Low, or Unknown severity.
+                        </p>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>Risk Score</h3>
+                        <p>
+                            Converts severity into a numerical score to
+                            support SOC prioritization.
+                        </p>
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- EVIDENCE -->
+        <section class="section">
+            <div class="container">
+
+                <p class="section-label">IOC Evidence</p>
+
+                <h2 class="section-title">
+                    Malicious Tor exit node identified
+                </h2>
+
+                <p class="section-text">
+                    The demonstrated IOC was identified as Malicious and
+                    categorized as a Tor Exit Node with 95% confidence.
+                    The analyzer assigned Critical severity, Risk Score
+                    100, and recommended blocking the IOC, escalating to
+                    SOC Tier 2, and searching logs for related activity.
+                </p>
+
+                <div class="architecture-demo">
+                    <img
+                        src="images/ioc-analyzer-api-demo.png"
+                        alt="Threat Intelligence IOC Analyzer returning a malicious Tor exit node with Critical severity and Risk Score 100"
+                        loading="lazy"
+                    >
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- RESULTS -->
+        <section class="section section-alt">
+            <div class="container">
+
+                <p class="section-label">Analysis Results</p>
+
+                <h2 class="section-title">
+                    Reputation and risk across multiple IOC types
+                </h2>
+
+                <div class="case-study-grid">
+
+                    <article class="skill-card">
+                        <h3>2 Critical</h3>
+                        <p>
+                            Two malicious indicators were classified
+                            as Critical with Risk Score 100.
+                        </p>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>1 Medium</h3>
+                        <p>
+                            A suspicious file hash received Medium
+                            severity and Risk Score 50.
+                        </p>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>1 Unknown</h3>
+                        <p>
+                            An unknown hash was assigned Risk Score 25
+                            and marked for manual review.
+                        </p>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>2 Trusted</h3>
+                        <p>
+                            Trusted indicators received Low severity
+                            and Risk Score 10.
+                        </p>
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- BATCH ANALYSIS -->
+        <section class="section">
+            <div class="container">
+
+                <p class="section-label">Batch Analysis</p>
+
+                <h2 class="section-title">
+                    Six indicators analyzed and prioritized
+                </h2>
+
+                <p class="section-text">
+                    The batch workflow analyzed six indicators across IP,
+                    domain, and hash types. Findings included malicious,
+                    suspicious, trusted, and unknown reputations with
+                    corresponding severity levels and analyst actions.
+                </p>
+
+                <div class="case-study-grid">
+
+                    <article class="skill-card">
+                        <h3>IP Address</h3>
+                        <p>
+                            Supports analysis of network indicators such
+                            as malicious infrastructure and trusted services.
+                        </p>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>Domain</h3>
+                        <p>
+                            Supports reputation analysis for suspicious
+                            or legitimate domains.
+                        </p>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>File Hash</h3>
+                        <p>
+                            Supports file-indicator enrichment including
+                            suspicious and unknown hashes.
+                        </p>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>Analyst Action</h3>
+                        <p>
+                            Provides block, investigate, monitor,
+                            or manual-review guidance based on severity.
+                        </p>
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- LESSONS -->
+        <section class="section section-alt">
+            <div class="container">
+
+                <p class="section-label">Engineering Lessons</p>
+
+                <h2 class="section-title">
+                    Enrichment improves prioritization
+                </h2>
+
+                <p class="section-text">
+                    Raw indicators provide limited value without
+                    additional context. Reputation, confidence, threat
+                    type, severity, source, and recommended actions make
+                    IOC data more useful for analyst triage and response.
+                </p>
+
+                <p class="section-text">
+                    This project demonstrates how threat intelligence can
+                    be transformed into structured security decisions
+                    through API access, risk scoring, and repeatable
+                    analysis workflows.
+                </p>
+
+            </div>
+        </section>
+
+
+        <!-- FUTURE -->
+        <section class="section">
+            <div class="container">
+
+                <p class="section-label">Future Improvements</p>
+
+                <h2 class="section-title">
+                    Expanding threat-intelligence capability
+                </h2>
+
+                <p class="section-text">
+                    Future development can include external threat feeds,
+                    automated reputation APIs, IOC expiration and aging,
+                    caching, confidence weighting, passive DNS context,
+                    malware-family mapping, MITRE ATT&CK relationships,
+                    SIEM integration, and automated ingestion into the
+                    SOC correlation workflow.
+                </p>
+
+                <div class="hero-actions">
+
+                    <a
+                        class="button button-primary"
+                        href="https://github.com/benrayiii-netizen/threat-intelligence-ioc-analyzer"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        View GitHub Repository
+                    </a>
+
+                    <a
+                        class="button button-secondary"
+                        href="index.html#projects"
+                    >
+                        Back to Projects
+                    </a>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>
+                © <span id="current-year"></span>
+                Bennie Ray III. Built with HTML, CSS, and JavaScript.
+            </p>
+        </div>
+    </footer>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
