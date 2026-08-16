@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        http-equiv="Content-Security-Policy"
+        content="
+            default-src 'self';
+            script-src 'self';
+            style-src 'self';
+            img-src 'self' data:;
+            font-src 'self';
+            connect-src 'self';
+            object-src 'none';
+            frame-src 'none';
+            base-uri 'self';
+            form-action 'self';
+        "
+    >
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Case study for the BRIII SOC Alert Correlation Engine."
+    >
+
+    <title>
+        SOC Alert Correlation Engine | BRIII Case Study
+    </title>
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="images/favicon.png"
+    >
+</head>
+
+<body>
+
+    <header class="site-header">
+        <nav class="navbar container">
+
+            <a class="logo" href="index.html">
+                BR<span>III</span>
+            </a>
+
+            <ul class="nav-links">
+                <li>
+                    <a href="index.html#projects">
+                        ← Back to Portfolio
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+    </header>
+
+
+    <main>
+
+        <!-- CASE STUDY HERO -->
+        <section class="hero case-study-hero">
+            <div class="container hero-content">
+
+                <p class="eyebrow">
+                    PROJECT 03 • SOC OPERATIONS • ALERT CORRELATION
+                </p>
+
+                <h1>SOC Alert Correlation Engine</h1>
+
+                <h2>
+                    Correlating phishing and authentication alerts into
+                    prioritized security incidents with analyst guidance.
+                </h2>
+
+                <div class="tag-list">
+                    <span>Python</span>
+                    <span>Pandas</span>
+                    <span>SOC Operations</span>
+                    <span>Incident Response</span>
+                    <span>Correlation</span>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- PROBLEM -->
+        <section class="section">
+            <div class="container">
+
+                <p class="section-label">The Problem</p>
+
+                <h2 class="section-title">
+                    Individual alerts do not always tell the full story
+                </h2>
+
+                <p class="section-text">
+                    Security analysts often investigate alerts from
+                    different systems independently. A phishing event may
+                    appear moderate in isolation, while a suspicious login
+                    may appear unrelated. When both events affect the same
+                    user within a short period, however, the combined
+                    activity may represent a much more serious compromise.
+                </p>
+
+            </div>
+        </section>
+
+
+        <!-- SOLUTION -->
+        <section class="section section-alt">
+            <div class="container">
+
+                <p class="section-label">The Solution</p>
+
+                <h2 class="section-title">
+                    Correlating related security activity into incidents
+                </h2>
+
+                <p class="section-text">
+                    The correlation engine ingests phishing and suspicious
+                    login alerts, compares users and event timestamps,
+                    identifies related activity within a defined time
+                    window, and creates a consolidated security incident
+                    for analyst investigation.
+                </p>
+
+                <div class="case-study-grid">
+
+                    <article class="skill-card">
+                        <h3>User Correlation</h3>
+                        <p>
+                            Matches security alerts associated with the
+                            same user identity.
+                        </p>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>Time-Window Analysis</h3>
+                        <p>
+                            Identifies related alerts occurring close
+                            together in time.
+                        </p>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>Incident Creation</h3>
+                        <p>
+                            Converts related alerts into one consolidated
+                            incident record.
+                        </p>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>Analyst Guidance</h3>
+                        <p>
+                            Adds recommended response actions to support
+                            investigation and escalation.
+                        </p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ARCHITECTURE -->
+        <section class="section">
+            <div class="container">
+
+                <p class="section-label">Architecture</p>
+
+                <h2 class="section-title">
+                    From separate alerts to one prioritized incident
+                </h2>
+
+                <div class="case-flow">
+
+                    <div class="case-flow-step">
+                        <strong>1</strong>
+                        <span>Phishing Alert</span>
+                    </div>
+
+                    <div class="case-flow-arrow">→</div>
+
+                    <div class="case-flow-step">
+                        <strong>2</strong>
+                        <span>Login Alert</span>
+                    </div>
+
+                    <div class="case-flow-arrow">→</div>
+
+                    <div class="case-flow-step">
+                        <strong>3</strong>
+                        <span>User Match</span>
+                    </div>
+
+                    <div class="case-flow-arrow">→</div>
+
+                    <div class="case-flow-step">
+                        <strong>4</strong>
+                        <span>Time Correlation</span>
+                    </div>
+
+                    <div class="case-flow-arrow">→</div>
+
+                    <div class="case-flow-step">
+                        <strong>5</strong>
+                        <span>Risk Scoring</span>
+                    </div>
+
+                    <div class="case-flow-arrow">→</div>
+
+                    <div class="case-flow-step">
+                        <strong>6</strong>
+                        <span>SOC Incident</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- INCIDENT ENGINEERING -->
+        <section class="section section-alt">
+            <div class="container">
+
+                <p class="section-label">Incident Engineering</p>
+
+                <h2 class="section-title">
+                    Turning correlated alerts into analyst-ready cases
+                </h2>
+
+                <div class="case-study-grid">
+
+                    <article class="skill-card">
+                        <h3>Incident ID</h3>
+                        <p>
+                            Each correlated event is assigned a unique
+                            incident identifier.
+                        </p>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>Severity</h3>
+                        <p>
+                            Correlated phishing and login activity is
+                            prioritized using incident severity.
+                        </p>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>Case Ownership</h3>
+                        <p>
+                            Incidents include status and assigned analyst
+                            fields to simulate SOC case management.
+                        </p>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>Recommended Actions</h3>
+                        <p>
+                            Response guidance includes account, session,
+                            mailbox, MFA, sender, and escalation actions.
+                        </p>
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- EVIDENCE -->
+        <section class="section">
+            <div class="container">
+
+                <p class="section-label">Correlation Evidence</p>
+
+                <h2 class="section-title">
+                    Two Critical incidents identified
+                </h2>
+
+                <p class="section-text">
+                    The demonstrated workflow processed three phishing
+                    alerts and three suspicious-login alerts. Two related
+                    user-event pairs were identified within the configured
+                    correlation window and converted into Critical
+                    incidents.
+                </p>
+
+                <div class="architecture-demo">
+                    <img
+                        src="images/soc-correlation-demo.png"
+                        alt="SOC Alert Correlation Engine showing Critical incidents, Risk Score 100, SOC Tier 1 assignment, and recommended actions"
+                        loading="lazy"
+                    >
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- RESULTS -->
+        <section class="section section-alt">
+            <div class="container">
+
+                <p class="section-label">Correlation Results</p>
+
+                <h2 class="section-title">
+                    High-confidence incident prioritization
+                </h2>
+
+                <div class="case-study-grid">
+
+                    <article class="skill-card">
+                        <h3>2 Incidents</h3>
+                        <p>
+                            Two correlated incidents were created from
+                            the six source alerts.
+                        </p>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>Critical Severity</h3>
+                        <p>
+                            Both correlated incidents were assigned
+                            Critical severity.
+                        </p>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>Risk Score 100</h3>
+                        <p>
+                            Each incident received the highest demonstrated
+                            risk score for analyst prioritization.
+                        </p>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>SOC Tier 1</h3>
+                        <p>
+                            Incidents were created with Open status and
+                            assigned to SOC Tier 1.
+                        </p>
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- RESPONSE ACTIONS -->
+        <section class="section">
+            <div class="container">
+
+                <p class="section-label">Analyst Response</p>
+
+                <h2 class="section-title">
+                    Recommended investigation and containment actions
+                </h2>
+
+                <p class="section-text">
+                    The correlated incidents provide response guidance
+                    including blocking malicious senders or domains,
+                    checking MFA status, reviewing sign-in activity,
+                    resetting credentials, revoking active sessions,
+                    investigating mailbox rules, and escalating the case
+                    to SOC Tier 2 when appropriate.
+                </p>
+
+            </div>
+        </section>
+
+
+        <!-- LESSONS -->
+        <section class="section section-alt">
+            <div class="container">
+
+                <p class="section-label">Engineering Lessons</p>
+
+                <h2 class="section-title">
+                    Correlation reduces alert isolation
+                </h2>
+
+                <p class="section-text">
+                    The project demonstrates that alerts become more useful
+                    when analysts can evaluate relationships across multiple
+                    security controls instead of treating each signal as an
+                    independent event.
+                </p>
+
+                <p class="section-text">
+                    Adding correlation logic, incident IDs, case status,
+                    ownership, risk scoring, and response recommendations
+                    moves the workflow closer to practical SOC incident
+                    handling.
+                </p>
+
+            </div>
+        </section>
+
+
+        <!-- FUTURE -->
+        <section class="section">
+            <div class="container">
+
+                <p class="section-label">Future Improvements</p>
+
+                <h2 class="section-title">
+                    Expanding the correlation engine
+                </h2>
+
+                <p class="section-text">
+                    Future development can include additional alert sources,
+                    configurable correlation windows, MITRE ATT&CK mapping,
+                    graph-based relationships, external SIEM integration,
+                    automated case escalation, threat-intelligence context,
+                    persistence in a database, and AI-assisted incident
+                    summarization.
+                </p>
+
+                <div class="hero-actions">
+
+                    <a
+                        class="button button-primary"
+                        href="https://github.com/benrayiii-netizen/soc-alert-correlation-engine"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        View GitHub Repository
+                    </a>
+
+                    <a
+                        class="button button-secondary"
+                        href="index.html#projects"
+                    >
+                        Back to Projects
+                    </a>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>
+                © <span id="current-year"></span>
+                Bennie Ray III. Built with HTML, CSS, and JavaScript.
+            </p>
+        </div>
+    </footer>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
