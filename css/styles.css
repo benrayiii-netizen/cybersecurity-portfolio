@@ -437,3 +437,70 @@ a {
     font-size: 0.95rem;
     line-height: 1.6;
 }
+
+/* Project Case Studies */
+
+.case-study-hero {
+    min-height: 70vh;
+}
+
+.case-study-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+    margin-top: 2rem;
+}
+
+.case-flow {
+    display: flex;
+    align-items: stretch;
+    gap: 0.75rem;
+    margin-top: 2rem;
+}
+
+.case-flow-step {
+    flex: 1;
+    min-width: 0;
+    padding: 1.25rem;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--surface);
+    text-align: center;
+}
+
+.case-flow-step strong {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--accent);
+    font-size: 1.4rem;
+}
+
+.case-flow-step span {
+    color: var(--text);
+    font-weight: 700;
+}
+
+.case-flow-arrow {
+    display: flex;
+    align-items: center;
+    color: var(--accent);
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+@media (max-width: 900px) {
+    .case-flow {
+        flex-direction: column;
+    }
+
+    .case-flow-arrow {
+        justify-content: center;
+        transform: rotate(90deg);
+    }
+}
+
+@media (max-width: 700px) {
+    .case-study-grid {
+        grid-template-columns: 1fr;
+    }
+}

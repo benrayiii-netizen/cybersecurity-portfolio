@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        http-equiv="Content-Security-Policy"
+        content="
+            default-src 'self';
+            script-src 'self';
+            style-src 'self';
+            img-src 'self' data:;
+            font-src 'self';
+            connect-src 'self';
+            object-src 'none';
+            frame-src 'none';
+            base-uri 'self';
+            form-action 'self';
+        "
+    >
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Case study for the BRIII AI Phishing Detection API."
+    >
+
+    <title>
+        AI Phishing Detection API | BRIII Case Study
+    </title>
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="images/favicon.png"
+    >
+</head>
+
+<body>
+
+    <header class="site-header">
+        <nav class="navbar container">
+
+            <a class="logo" href="index.html">
+                BR<span>III</span>
+            </a>
+
+            <ul class="nav-links">
+                <li>
+                    <a href="index.html#projects">
+                        ← Back to Portfolio
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+    </header>
+
+
+    <main>
+
+        <!-- CASE STUDY HERO -->
+        <section class="hero case-study-hero">
+            <div class="container hero-content">
+
+                <p class="eyebrow">
+                    PROJECT 01 • AI SECURITY • DETECTION ENGINEERING
+                </p>
+
+                <h1>AI Phishing Detection API</h1>
+
+                <h2>
+                    Machine-learning email classification with
+                    explainability, risk prioritization, API access,
+                    authentication, and logging.
+                </h2>
+
+                <div class="tag-list">
+                    <span>Python</span>
+                    <span>Scikit-learn</span>
+                    <span>FastAPI</span>
+                    <span>Machine Learning</span>
+                    <span>Docker</span>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- PROBLEM -->
+        <section class="section">
+            <div class="container">
+
+                <p class="section-label">The Problem</p>
+
+                <h2 class="section-title">
+                    Turning suspicious email into prioritized security data
+                </h2>
+
+                <p class="section-text">
+                    Security analysts must distinguish legitimate email
+                    from phishing attempts while processing large volumes
+                    of messages. A useful detector must do more than return
+                    a binary classification: it should provide confidence,
+                    explain why a message was flagged, and help prioritize
+                    the result for investigation.
+                </p>
+
+            </div>
+        </section>
+
+
+        <!-- SOLUTION -->
+        <section class="section section-alt">
+            <div class="container">
+
+                <p class="section-label">The Solution</p>
+
+                <h2 class="section-title">
+                    An explainable phishing detection pipeline
+                </h2>
+
+                <p class="section-text">
+                    The project uses a trained machine-learning classifier
+                    and text vectorizer to analyze email content. Predictions
+                    are enriched with confidence levels, influential text
+                    indicators, phishing categories, and severity so the
+                    result is more useful in a SOC-style workflow.
+                </p>
+
+                <div class="case-study-grid">
+
+                    <article class="skill-card">
+                        <h3>Classification</h3>
+                        <p>
+                            Determines whether submitted email content
+                            is phishing or legitimate.
+                        </p>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>Confidence</h3>
+                        <p>
+                            Reports model confidence and converts it into
+                            High, Medium, or Low confidence levels.
+                        </p>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>Explainability</h3>
+                        <p>
+                            Surfaces influential indicators that contributed
+                            to the machine-learning prediction.
+                        </p>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>Prioritization</h3>
+                        <p>
+                            Adds phishing category and severity information
+                            to support analyst triage.
+                        </p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ARCHITECTURE -->
+        <section class="section">
+            <div class="container">
+
+                <p class="section-label">Architecture</p>
+
+                <h2 class="section-title">
+                    From email text to security decision
+                </h2>
+
+                <div class="case-flow">
+
+                    <div class="case-flow-step">
+                        <strong>1</strong>
+                        <span>Email Input</span>
+                    </div>
+
+                    <div class="case-flow-arrow">→</div>
+
+                    <div class="case-flow-step">
+                        <strong>2</strong>
+                        <span>FastAPI</span>
+                    </div>
+
+                    <div class="case-flow-arrow">→</div>
+
+                    <div class="case-flow-step">
+                        <strong>3</strong>
+                        <span>Vectorizer</span>
+                    </div>
+
+                    <div class="case-flow-arrow">→</div>
+
+                    <div class="case-flow-step">
+                        <strong>4</strong>
+                        <span>ML Classifier</span>
+                    </div>
+
+                    <div class="case-flow-arrow">→</div>
+
+                    <div class="case-flow-step">
+                        <strong>5</strong>
+                        <span>Risk + Explanation</span>
+                    </div>
+
+                    <div class="case-flow-arrow">→</div>
+
+                    <div class="case-flow-step">
+                        <strong>6</strong>
+                        <span>JSON Response</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- SECURITY -->
+        <section class="section section-alt">
+            <div class="container">
+
+                <p class="section-label">Security Engineering</p>
+
+                <h2 class="section-title">
+                    Controls beyond the machine-learning model
+                </h2>
+
+                <div class="case-study-grid">
+
+                    <article class="skill-card">
+                        <h3>API Authentication</h3>
+                        <p>
+                            API-key validation protects prediction
+                            functionality from unauthenticated access.
+                        </p>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>Environment Secrets</h3>
+                        <p>
+                            Sensitive API configuration is separated from
+                            source code using environment variables.
+                        </p>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>Logging</h3>
+                        <p>
+                            API activity can be recorded for operational
+                            visibility and investigation.
+                        </p>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>Containerization</h3>
+                        <p>
+                            Docker support provides a repeatable deployment
+                            environment for the application.
+                        </p>
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- EVIDENCE -->
+        <section class="section">
+            <div class="container">
+
+                <p class="section-label">Detection Evidence</p>
+
+                <h2 class="section-title">
+                    Critical credential-theft detection
+                </h2>
+
+                <p class="section-text">
+                    A test phishing message was classified as phishing
+                    with 99.9% confidence. The API identified influential
+                    terms including account, click, urgent, suspended,
+                    and verify, categorized the message as Credential
+                    Theft, and assigned Critical severity.
+                </p>
+
+                <div class="architecture-demo">
+                    <img
+                        src="images/phishing-api-demo.png"
+                        alt="AI Phishing Detection API returning a phishing prediction with 99.9 percent confidence"
+                        loading="lazy"
+                    >
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- RESULTS -->
+        <section class="section section-alt">
+            <div class="container">
+
+                <p class="section-label">Model Results</p>
+
+                <h2 class="section-title">
+                    Evaluation and batch-analysis capability
+                </h2>
+
+                <div class="case-study-grid">
+
+                    <article class="skill-card">
+                        <h3>98% Accuracy</h3>
+                        <p>
+                            Evaluation testing produced approximately
+                            98% classification accuracy.
+                        </p>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>82,486 Emails</h3>
+                        <p>
+                            The batch-scanning workflow processed more
+                            than 82,000 email records.
+                        </p>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>43,119 Phishing</h3>
+                        <p>
+                            The batch workflow classified 43,119 records
+                            as phishing in the project dataset.
+                        </p>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>Explainable Alerts</h3>
+                        <p>
+                            Predictions include indicators that help
+                            explain why content was considered suspicious.
+                        </p>
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- LESSONS -->
+        <section class="section">
+            <div class="container">
+
+                <p class="section-label">Engineering Lessons</p>
+
+                <h2 class="section-title">
+                    What this project demonstrates
+                </h2>
+
+                <p class="section-text">
+                    Building the classifier was only one part of the
+                    engineering problem. The project evolved into a
+                    security service by adding explainability, confidence
+                    thresholds, batch processing, SOC-style reporting,
+                    API access, authentication, logging, and Docker
+                    support.
+                </p>
+
+                <p class="section-text">
+                    The result demonstrates how machine learning can be
+                    incorporated into a broader detection-engineering
+                    workflow rather than treated as an isolated model.
+                </p>
+
+            </div>
+        </section>
+
+
+        <!-- NEXT -->
+        <section class="section section-alt">
+            <div class="container">
+
+                <p class="section-label">Future Improvements</p>
+
+                <h2 class="section-title">
+                    Where the detector can go next
+                </h2>
+
+                <p class="section-text">
+                    Future development can include URL and domain
+                    reputation enrichment, attachment analysis, improved
+                    model evaluation, production-grade secret management,
+                    centralized logging, cloud deployment, and integration
+                    with the SOC correlation workflow.
+                </p>
+
+                <div class="hero-actions">
+
+                    <a
+                        class="button button-primary"
+                        href="https://github.com/benrayiii-netizen/ai-cybersecurity-phishing-detector"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        View GitHub Repository
+                    </a>
+
+                    <a
+                        class="button button-secondary"
+                        href="index.html#projects"
+                    >
+                        Back to Projects
+                    </a>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>
+                © <span id="current-year"></span>
+                Bennie Ray III. Built with HTML, CSS, and JavaScript.
+            </p>
+        </div>
+    </footer>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
