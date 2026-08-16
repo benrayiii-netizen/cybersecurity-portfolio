@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        http-equiv="Content-Security-Policy"
+        content="
+            default-src 'self';
+            script-src 'self';
+            style-src 'self';
+            img-src 'self' data:;
+            font-src 'self';
+            connect-src 'self';
+            object-src 'none';
+            frame-src 'none';
+            base-uri 'self';
+            form-action 'self';
+        "
+    >
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Case study for the BRIII Suspicious Login Detector."
+    >
+
+    <title>
+        Suspicious Login Detector | BRIII Case Study
+    </title>
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="images/favicon.png"
+    >
+</head>
+
+<body>
+
+    <header class="site-header">
+        <nav class="navbar container">
+
+            <a class="logo" href="index.html">
+                BR<span>III</span>
+            </a>
+
+            <ul class="nav-links">
+                <li>
+                    <a href="index.html#projects">
+                        ← Back to Portfolio
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+    </header>
+
+
+    <main>
+
+        <!-- CASE STUDY HERO -->
+        <section class="hero case-study-hero">
+            <div class="container hero-content">
+
+                <p class="eyebrow">
+                    PROJECT 02 • IDENTITY SECURITY • DETECTION ENGINEERING
+                </p>
+
+                <h1>Suspicious Login Detector</h1>
+
+                <h2>
+                    Identity-threat detection with behavioral rules,
+                    threat-intelligence enrichment, risk scoring,
+                    API analysis, and SOC-oriented alerting.
+                </h2>
+
+                <div class="tag-list">
+                    <span>Python</span>
+                    <span>FastAPI</span>
+                    <span>Threat Intelligence</span>
+                    <span>Risk Scoring</span>
+                    <span>Docker</span>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- PROBLEM -->
+        <section class="section">
+            <div class="container">
+
+                <p class="section-label">The Problem</p>
+
+                <h2 class="section-title">
+                    Identifying risky authentication behavior
+                </h2>
+
+                <p class="section-text">
+                    Authentication logs can contain early indicators of
+                    account compromise, including repeated login failures,
+                    successful access following failures, unusual
+                    geographic locations, and successful authentication
+                    outside expected hours. Analysts need a way to turn
+                    these individual signals into prioritized alerts.
+                </p>
+
+            </div>
+        </section>
+
+
+        <!-- SOLUTION -->
+        <section class="section section-alt">
+            <div class="container">
+
+                <p class="section-label">The Solution</p>
+
+                <h2 class="section-title">
+                    Multi-signal login threat detection
+                </h2>
+
+                <p class="section-text">
+                    The detector analyzes authentication activity using
+                    multiple detection rules and enriches login events
+                    with local threat intelligence. Findings are assigned
+                    categories, severity levels, and risk scores to help
+                    prioritize analyst investigation.
+                </p>
+
+                <div class="case-study-grid">
+
+                    <article class="skill-card">
+                        <h3>Brute Force Detection</h3>
+                        <p>
+                            Detects multiple failed authentication
+                            attempts associated with the same source.
+                        </p>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>Account Compromise</h3>
+                        <p>
+                            Detects successful authentication occurring
+                            after recent failed login attempts.
+                        </p>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>Location Analysis</h3>
+                        <p>
+                            Identifies authentication activity from
+                            unusual geographic locations.
+                        </p>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>After-Hours Detection</h3>
+                        <p>
+                            Flags successful authentication occurring
+                            outside expected operating hours.
+                        </p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ARCHITECTURE -->
+        <section class="section">
+            <div class="container">
+
+                <p class="section-label">Architecture</p>
+
+                <h2 class="section-title">
+                    From login event to prioritized alert
+                </h2>
+
+                <div class="case-flow">
+
+                    <div class="case-flow-step">
+                        <strong>1</strong>
+                        <span>Login Event</span>
+                    </div>
+
+                    <div class="case-flow-arrow">→</div>
+
+                    <div class="case-flow-step">
+                        <strong>2</strong>
+                        <span>FastAPI</span>
+                    </div>
+
+                    <div class="case-flow-arrow">→</div>
+
+                    <div class="case-flow-step">
+                        <strong>3</strong>
+                        <span>Detection Rules</span>
+                    </div>
+
+                    <div class="case-flow-arrow">→</div>
+
+                    <div class="case-flow-step">
+                        <strong>4</strong>
+                        <span>Threat Intel</span>
+                    </div>
+
+                    <div class="case-flow-arrow">→</div>
+
+                    <div class="case-flow-step">
+                        <strong>5</strong>
+                        <span>Risk Scoring</span>
+                    </div>
+
+                    <div class="case-flow-arrow">→</div>
+
+                    <div class="case-flow-step">
+                        <strong>6</strong>
+                        <span>Alert Response</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- DETECTION ENGINEERING -->
+        <section class="section section-alt">
+            <div class="container">
+
+                <p class="section-label">Detection Engineering</p>
+
+                <h2 class="section-title">
+                    Multiple signals provide stronger context
+                </h2>
+
+                <div class="case-study-grid">
+
+                    <article class="skill-card">
+                        <h3>Known Bad IP Activity</h3>
+                        <p>
+                            Source IP addresses are compared with local
+                            threat-intelligence data to identify known
+                            suspicious infrastructure.
+                        </p>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>Severity Assignment</h3>
+                        <p>
+                            Findings are classified using Critical,
+                            High, and Medium severity levels based on
+                            detected behavior.
+                        </p>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>Risk Scoring</h3>
+                        <p>
+                            Alerts receive numerical risk scores so the
+                            most important activity can be investigated
+                            first.
+                        </p>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>API Logging</h3>
+                        <p>
+                            API requests can be logged to support
+                            operational visibility and investigation.
+                        </p>
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- EVIDENCE -->
+        <section class="section">
+            <div class="container">
+
+                <p class="section-label">Detection Evidence</p>
+
+                <h2 class="section-title">
+                    Three alerts from one suspicious login
+                </h2>
+
+                <p class="section-text">
+                    A successful after-hours login from a known suspicious
+                    geographic source was analyzed after three recent
+                    authentication failures. The detector generated three
+                    separate findings: Possible Account Compromise,
+                    Unusual Location, and After Hours Login.
+                </p>
+
+                <div class="architecture-demo">
+                    <img
+                        src="images/suspicious-login-api-demo.png"
+                        alt="Suspicious Login Detector returning multiple security alerts for one authentication event"
+                        loading="lazy"
+                    >
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- RESULTS -->
+        <section class="section section-alt">
+            <div class="container">
+
+                <p class="section-label">Detection Results</p>
+
+                <h2 class="section-title">
+                    Prioritized identity-security findings
+                </h2>
+
+                <div class="case-study-grid">
+
+                    <article class="skill-card">
+                        <h3>Critical • 100</h3>
+                        <p>
+                            Failure Followed By Success was categorized
+                            as Possible Account Compromise with a
+                            Risk Score of 100.
+                        </p>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>High • 90</h3>
+                        <p>
+                            Unusual Location activity from the suspicious
+                            geographic source received a Risk Score of 90.
+                        </p>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>Medium • 65</h3>
+                        <p>
+                            The successful after-hours login generated
+                            an additional Medium-severity alert with
+                            a Risk Score of 65.
+                        </p>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>Threat Intel Enriched</h3>
+                        <p>
+                            The source was identified through Local Threat
+                            Intel as Suspicious Geo and marked known bad.
+                        </p>
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- BATCH RESULTS -->
+        <section class="section">
+            <div class="container">
+
+                <p class="section-label">Security Report</p>
+
+                <h2 class="section-title">
+                    Detection across authentication events
+                </h2>
+
+                <p class="section-text">
+                    The batch detection workflow analyzed 18 login events
+                    and generated seven security alerts. Those findings
+                    included two Critical alerts, four High alerts, and
+                    one Medium alert across account-compromise,
+                    known-bad-IP, and brute-force categories.
+                </p>
+
+                <div class="case-study-grid">
+
+                    <article class="skill-card">
+                        <h3>18 Events</h3>
+                        <p>
+                            Authentication records processed during
+                            the demonstrated security-report workflow.
+                        </p>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>7 Alerts</h3>
+                        <p>
+                            Multiple detection rules generated prioritized
+                            findings from the login activity.
+                        </p>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>2 Critical</h3>
+                        <p>
+                            Two events indicated possible account
+                            compromise following failed authentication.
+                        </p>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>4 High</h3>
+                        <p>
+                            High-severity findings included known-bad-IP
+                            activity and brute-force behavior.
+                        </p>
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- LESSONS -->
+        <section class="section section-alt">
+            <div class="container">
+
+                <p class="section-label">Engineering Lessons</p>
+
+                <h2 class="section-title">
+                    Context changes the value of an alert
+                </h2>
+
+                <p class="section-text">
+                    A single authentication signal may not provide enough
+                    context for an analyst. Combining recent failures,
+                    successful authentication, geographic information,
+                    time-of-day behavior, and threat intelligence produces
+                    a more useful security picture.
+                </p>
+
+                <p class="section-text">
+                    This project demonstrates how detection rules,
+                    enrichment, severity classification, and risk scoring
+                    can transform raw login activity into actionable
+                    identity-security alerts.
+                </p>
+
+            </div>
+        </section>
+
+
+        <!-- FUTURE -->
+        <section class="section">
+            <div class="container">
+
+                <p class="section-label">Future Improvements</p>
+
+                <h2 class="section-title">
+                    Expanding identity-threat detection
+                </h2>
+
+                <p class="section-text">
+                    Future development can include impossible-travel
+                    detection, user and entity behavior analytics,
+                    device reputation, MFA context, cloud identity logs,
+                    centralized SIEM ingestion, external threat-intelligence
+                    feeds, and automated integration with the SOC alert
+                    correlation engine.
+                </p>
+
+                <div class="hero-actions">
+
+                    <a
+                        class="button button-primary"
+                        href="https://github.com/benrayiii-netizen/suspicious-login-detector"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        View GitHub Repository
+                    </a>
+
+                    <a
+                        class="button button-secondary"
+                        href="index.html#projects"
+                    >
+                        Back to Projects
+                    </a>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>
+                © <span id="current-year"></span>
+                Bennie Ray III. Built with HTML, CSS, and JavaScript.
+            </p>
+        </div>
+    </footer>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
